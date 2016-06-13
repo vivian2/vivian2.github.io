@@ -1,0 +1,1055 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<title>淘宝模仿</title>
+		<link rel="stylesheet" type="text/css" href="css/index.css">
+		<link rel="stylesheet" type="text/css" href="css/reset.css">
+		<link rel="stylesheet" type="text/css" href="css/font.css">
+		<script type="text/javascript" src="js/inde.js"></script>
+		<script type="text/javascript" src="js/jquery-1.12.3.js"></script>
+		<script type="text/javascript" src="js/jquery-style.js"></script>
+
+	</head>
+	<body>
+	    <!--淘宝导航条-->
+		<div class="tb_top">
+			<div class="wrap clearfix">
+					<ul id="nav-left" class="site_nav_left clearfix">
+						<li id="site-nav-lo" class="siteNavLogin">
+						<div class="loginBased ">
+							<div class="loginCdt site_menu clearfix">
+								<div class="not_signed" style="display:none;"><!--稍后设置未登录信息-->
+									<a href="#" target="_top">亲，请登录</a>
+									<a href="#" target="_top">请注册</a>
+								</div>
+								<div class="have_signed">
+									<a href="#"class="nav_login_info">逆能的飞翔</a>
+									<span class="nav_icon">*</span>
+								</div>
+							</div>
+							<!--鼠标滑动的表现-->
+							<div id="nav-meun-sli" class="nav_menu_login" style="display:none;">
+							<div class="site-meun-wrap">
+							    <div class="menu-login-wrap clearfix">
+								    <a class="nav-user-image" href="#">
+									    <img src="img/touxiang.jpg" alt="">
+									</a>
+							        <div class="menu-login-info">
+									    <p class="menu-login-oprate">
+										    <a href="#">账号管理</a>
+											<span>|</span>
+											<a href="#">退出</a>
+										</p>
+										<p>
+										    <a class="site-nav-vip-icon" href="#"></a>
+										</p>
+										<p>
+										    <a href="#">
+											<strong class="site-vip-privilege">
+										    我可尊享<b>8</b>项特权
+											</strong>
+										    </a>
+										</p>
+									</div>
+								</div>
+								<div class="meun-message">
+								    <p>
+								    <a href="#">
+								    我还可享受最后一天<b>会员日</b>。
+								    </a>
+								    </p>
+								</div>
+								<div class="meun-special-collect">
+								<div class="meun-specia-wrap">
+								<div class="meun-special-icon" id="lista">
+								    <a href="#">
+									    <img src="img/jieri.png" alt="节日特权">节日特权
+									</a>
+									<a href="#">
+									    <img src="img/shengri.png" alt="生日特权">生日特权
+									</a>
+									<a href="#">
+									    <img src="img/huiyuanri.png" alt="会员日">会员日
+									</a>
+									<a href="#">
+									    <img src="img/huiyuanup.png" alt="会员升级">会员升级
+									</a>
+									<a href="#">
+									    <img src="img/memory.png" alt="周年纪念">周年纪念
+									</a>
+									<a href="#">
+									    <img src="img/baibi.png" alt="百笔好礼">百笔好礼
+									</a>
+									<a href="#">
+									    <img src="img/baitian.png" alt="百天好礼">百天好礼
+									</a>
+									<a href="#">
+									    <img src="img/haopin.png" alt="好评达人">好评达人
+									</a>
+								</div>		
+								</div>
+								<a  id="pre" href="#" class="meun-icon-pre meun-icon-dif" ><</a>
+								<a href="#" class="meun-icon-next meun-icon-dif" id="next">></a>
+								</div>
+							</div>
+						</div>	
+						</div>
+						</li>
+					    <li class="siteMsg" id="nav-msg">
+						<div class="msgBased">
+						    <div class="msgLike site_menu">
+							    <span class="area">
+							        <span class="nav_logo_icon"></span>
+								    <span>消息</span>
+								    <span class="msg_logo_unread">1</span>
+							    </span>
+							    <span class="nav_icon">*</span>
+							</div>
+							<!--稍后设置鼠标滑动的表现-->
+							<div id="nav-msga" class="nav_menu_login" style="display:none">
+							<div class="nav-meun-watchAll ">
+							    <a href="#">查看全部</a>
+							</div>
+							</div>
+						</div>
+						</li>
+						<li class="site_mobile">
+						    <div class="mobileBased site_menu nav-site-all">
+						        <a href="#">
+							        <span>手机淘宝</span>
+							    </a>
+						    </div>
+						</li>
+					</ul>
+				<ul id="nav-right" class="site_nav_right">
+				    <li class="site_nav_my" id="site-nav-myB">
+					<div class="myBased">
+					    <div class="myappear site_menu">
+						    <a href="#" class="myappName">我的淘宝</a>
+							<span class="nav_icon">*</span>
+						</div>
+						<!--稍后设置鼠标滑动效果-->
+						<div class="nav_menu_login" style="display:none">
+						<div class="nav-meun-listM" id="nav-my-b" >
+						  <a href="#">已买到的宝贝</a>
+						  <a href="#">我的足迹</a>
+						</div>
+						</div>
+					</div>
+					</li>
+					<li class="site_nav_shopCar" id="site-nav-sc">
+					<div class="shopCarBased">
+					<div class="shopCarappear site_menu">
+					    <div class="shopCar_notSign">
+						    <a href="#">
+							<span class="area">
+						        <span class="nav_logo_icon"></span>
+							    <span>购物车</span>
+								 <span class="shopCar_logo_unread">0</span>
+							</span>
+							<span class="nav_icon">*</span>
+							</a>
+					    </div>
+						<div class="shopCar_signed" style="display:none;"><!--登录之后的样式-->
+						     <span class="nav_logo_icon"></span>
+							 <span class="nav_icon">*</span>
+							 <span>购物车</span>
+							 <span class="msg_logo_unread">1</span>
+					    </div>
+					</div>	
+					<!--稍后设置鼠标滑动效果-->
+					<div class="nav_menu_login" id="nav-meun-sho" style="display:none">
+					<div class="nav-shop-car">
+					    <p>
+					         <a href="">查看我的购物车
+							 </a>
+					    </p>
+					</div>
+					</div>
+					</div>
+					</li>
+					<li class="site_nav_collect" id="site-nav-col">
+					    <div class="collectappear site_menu">
+						    <a href="#">
+							    <span class="area">
+						             <span class="nav_logo_icon"></span>
+							         <span>收藏夹</span>
+								</span>
+								<span class="nav_icon">*</span>
+						    </a>
+					    </div>
+						<!--稍后设置鼠标滑动效果-->
+						<div class="nav_menu_login" id="nav-me-col" style="display:none">
+						   <div class="nav-meun-card">
+						   <a href="#">收藏的宝贝</a>
+						   <a href="#">收藏的店铺</a>
+						   </div>
+						</div>
+					</li>
+					<li class="site_cata">
+					    <div class="cataBased site_menu">
+						    <a href="#">
+							    <span>商品分类</span>
+							</a>
+						</div>
+					</li>
+					<li class="site-nav-pipe">|</li>
+					<li class="site_nav_seller" id="siteSell">
+					    <div class="sellerBased">
+					        <div class="sellerappear site_menu">
+							    <a href="#">卖家中心</a>
+							    <span class="nav_icon">*</span>
+						    </div>
+						<div class="nav_menu_login" style="display:none">
+						   <div class="seller-ce">
+						   <a href="#">免费开店</a>
+						   <a href="#">已卖出的宝贝</a>
+						   <a href="#">出售中的宝贝</a>
+						   <a href="#">卖家服务市场</a>
+						   <a href="#">卖家培训中心</a>
+						   </div>
+						</div><!--鼠标滑动的表现-->
+						</div>
+					</li>
+					<li class="site_nav_listen" id="site-navCs">
+					<div class="listenBased">
+					    <div class="listenappear site_menu">
+							<a href="#">联系客服</a>
+							<span class="nav_icon">*</span>
+						</div>
+						<div class="nav_menu_login" style="display:none">
+						<div class="nav-Cs">
+						    <a href="#">消费者客服</a>
+							<a href="#">卖家客服</a>
+						</div>
+						</div><!--鼠标滑动的表现-->
+					</div>
+					</li>
+					<li class="siteGuide" id="site-guide-p">
+					    <div class="guideBased">
+						    <div class="guideLike site_menu">
+							    <span class="area">
+							        <span class="nav_logo_icon"></span>
+								    <span>网站导航</span>
+								</span>
+								<span class="nav_icon">*</span>
+							</div>
+							<div class="nav_menu_login"style="display:none">
+							<div class="site-navGu">
+							<div class="nav-gui-mode One">
+							    <div class="guide-topOne">
+								    <h4>主题市场</h4>
+								</div>
+								<div class="guide-mo">
+								<ul>
+								    <li><a href="#">女装</a></li>
+									<li><a href="#">男装</a></li>
+									<li><a href="#">内衣</a></li>
+									<li><a href="#">鞋靴</a></li>
+									<li><a href="#">箱包</a></li>
+									<li><a href="#">婴童</a></li>
+									<li><a href="#">家电</a></li>
+									<li><a href="#">数码</a></li>
+									<li><a href="#">手机</a></li>
+									<li><a href="#">美妆</a></li>
+									<li><a href="#">珠宝</a></li>
+									<li><a href="#">眼镜</a></li>
+									<li><a href="#">手表</a></li>
+									<li><a href="#">运动</a></li>
+									<li><a href="#">户外</a></li>
+									<li><a href="#">乐器</a></li>
+								</ul>
+								</div>
+							</div>
+							<div class="nav-gui-mode Two">
+							 <div class="guide-topTwo">
+								    <h4>特色市场</h4>
+								</div>
+								<div class="guide-mo">
+								<ul>
+								    <li><a href="#">iFashion</a></li>
+									<li><a href="#">爱逛街</a></li>
+									<li><a href="#">美妆秀</a></li>
+									<li><a href="#">全球购</a></li>
+									<li><a href="#">腔调</a></li>
+									<li><a href="#">淘女郎</a></li>
+									<li><a href="#">星店</a></li>
+									<li><a href="#">汇吃</a></li>
+									<li><a href="#">格调</a></li>
+									<li><a href="#">运动派</a></li>
+									<li><a href="#">极有家</a></li>
+									<li><a href="#">特色中国</a></li>
+								</ul>
+								</div>
+							 </div>
+							<div class="nav-gui-mode Three">
+							   <div class="guide-topThree">
+								    <h4>阿里APP</h4>
+								</div>
+								<div class="guide-mo">
+								<ul>
+								    <li><a href="#">淘宝</a></li>
+									<li><a href="#">天猫</a></li>
+									<li><a href="#">支付宝</a></li>
+									<li><a href="#">聚划算</a></li>
+									<li><a href="#">去啊</a></li>
+									<li><a href="#">旺信</a></li>
+								</ul>
+								</div>
+								</div>
+							<div class="nav-gui-mode Four">
+							    <div class="guide-topFour">
+								    <h4>精彩推荐集</h4>
+								</div>
+								<div class="guide-mo">
+								<ul>
+								    <li width=25%><a href="#">余额宝</a></li>
+									<li><a href="#">大牌捡宝</a></li>
+									<li><a href="#">淘公仔</a></li>
+									<li><a href="#">浏览器</a></li>
+									<li><a href="#">淘宝香港</a></li>
+									<li><a href="#">淘宝台湾</a></li>
+									<li><a href="#">淘宝全球</a></li>
+								</ul>
+								</div>
+								</div>
+							</div>
+							</div><!--稍后设置鼠标滑动的表现-->
+						</div>
+					</li>
+					</ul>
+				
+			</div>
+		</div>
+		<!--正文第一部分-->
+		<div class="site-Taone">
+			<!--输入框部分-->
+		    <div class="taon-Title">
+			  <div class="taon-image">
+			    <a href="#"></a>
+			  </div>
+			  <div class="taon-search" id="taon-search">
+			    <div class="taon-serKind">
+				    <ul class="clearfix">
+					    <li class="hasclicked">宝贝</li>
+						<li>天猫</li>
+						<li>店铺</li>
+					</ul>
+				</div>
+				<div class="taon-insearch">
+				<form action="#" method="post">
+					<div class="inputC" id="inputC">
+				    <input type="text" name="searching" placeholder="时尚女装"id="q">
+				    </div>
+				    <div class="photoLike">
+				    	<a href="#"><span><></span></a>
+				    </div>
+				    <button class="button_taon" id="taonB">搜索</button>
+				</form>
+				<div class="taon-higher">
+					<a href="#">高级搜索</a>
+				</div>
+				
+				</div>
+				<div class="hotWord-wrap clearfix">
+					<div class="hotWord-good">
+					<div class="hotWord-limited" id="hotWord-limited">
+						<a href="#">好孩子</a>
+					    <a href="#">玻璃杯</a>
+				        <a href="#">水杯</a>
+				        <a href="#">女T恤</a>
+				        <a href="#">时尚连衣裙</a>
+				    </div>
+				    <div class="hotWord-shop" id="hotWord-shop">
+						<a href="#">连衣裙</a>
+						<a href="#">智能手机</a>
+						<a href="#">休闲裤男</a>
+						<a href="#">女鞋</a>
+						<a href="#">双肩包女</a>
+					</div>
+					 </div>
+				    <div class="hotMore">
+				      <a href="#">更多</a>
+				      <i>></i>
+				    </div>           
+				</div>
+			 </div>
+			</div>	
+			<div class="taon-aline">
+				<!--导航栏部分-->
+				<div class='taon-nav'>
+					<ul class="taonTM">
+						<li><a href="#">天猫</a></li>
+						<li><a href="#">聚划算</a></li>
+						<li><a href="#">天猫超市</a></li>
+					</ul>
+					<ul>
+						<li class="pipe">|</li>
+						<li><a href="#">淘抢购</a></li>
+						<li><a href="#">电器械</a></li>
+						<li><a href="#">司法拍卖</a></li>
+						<li><a href="#">中国质造</a></li>
+						<li><a href="#">特色中国</a></li>
+					</ul>
+					<ul>
+						<li class="pipe">|</li>
+						<li><a href="#">阿里旅行</a></li>
+						<li><a href="#">智能生活</a></li>
+						<li><a href="#">苏宁易购</a></li>
+					</ul>
+				</div>
+				<!--正文包裹三列布局-->
+				<div class="taon-trap clearfix">
+                 <!--幻灯片部分-->
+                <div class="taon-ppt">
+				    <div class="taon-show clearfix">
+					<div class="taon-asle">
+					   <div class="taon-power">
+						  <a href="#" id="sliding"><img src="./img/1a.jpg"></a>
+					   </div>
+					   <div class="taon-promote">
+						  <ul id="redpot">
+							<li>
+								<a href="javascript:;"></a>
+							</li>
+							<li>
+								<a href="javascript:;"></a>
+							</li>
+							<li>
+								<a href="javascript:;"></a>
+							</li>
+							<li>
+								<a href="javascript:;"></a>
+							</li>
+							<li>
+								<a href="javascript:;"></a>
+							</li>
+						  </ul>
+					   </div>
+					   <div class="taon-tagD" style="display:none" id="letre">
+					   	<a href="javascript:;" class="taon-l" id="preva"><i><</i></a>
+					   	<a href="javascript:;" class="taon-r" id="backw"><i>></i></a>
+					   </div>
+					</div>
+					<div class="taon-as">
+						<a href=""><img src="./img/s1.jpg"></a>
+					</div>
+				    </div>
+				    <div class="taon-showAgain clearfix">
+            		<!--用bootstrap写-->
+            		<div class="taon-anothor">
+            			<div class="taon-showTop">
+						<span>天猫必逛</span>
+						<em>热门品牌，天天上天猫</em>
+						<strong><i>4</i>/6</strong>
+            		    </div>
+            		    <div class="taon-showSlide">
+            			    <img src="./img/1a.jpg">
+            		    </div>
+            		 </div>	
+            		<div class="taon-as2">
+            			<h4>今日热卖</h4>
+						<a href="#"><img src="./img/s2.jpg"></a>
+				    </div>   
+				    </div>
+				</div>
+				<!--侧边登录框之类的-->
+				<aside>
+					<div class="aside-login">
+						<div class="aside-user">
+							<a href="#" class="ai"><img src="./img/touxiang.jpg"alt=""></a>
+							<p>Hi!<span>逆能的飞翔</span></p>
+							<p><img src="./img/2b.png" alt=""><a href="#">领淘金币抵钱</a>
+								或去
+							   <a href="#">会员俱乐部</a>
+						    </p>
+						</div>
+						<ul>
+							<li><a href="#">登录</a></li>
+							<li><a href="#">注册</a></li>
+							<li><a href="#">开店</a></li>
+						</ul>
+					</div>
+					<div class="aside-notice" id="asideNotice">
+						<div class="aside-nav">
+						<ul id="asideNotone">
+							<li class="selected"><a href="#">公告</a></li>
+							<li><a href="#">规则</a></li>
+							<li><a href="#">论坛</a></li>
+							<li><a href="#">安全</a></li>
+							<li><a href="#">公益</a></li>
+						</ul>
+						</div>
+						<div class="aside-nocont" id="asideCont">
+							<ul style="display:block">
+								<li><a href="#">阿里苏宁发布“新三体”战略</a></li>
+								<li><a href="#">打造未来十年格局</a></li>
+								<li><a href="#">高诚信会员无条件信任</a></li>
+								<li><a href="#">200余万广告商品被处罚</a></li>
+							</ul>
+							<ul style="display:none">
+								<li><a href="#">出售假冒商品规则变更</a></li>
+								<li><a href="#">商品发布数量限制变更</a></li>
+								<li><a href="#">中国质造市场管理规范</a></li>
+								<li><a href="#">淘宝网营销规则变更</a></li>
+							</ul>
+							<ul style="display:none">
+								<li><a href="#">淘宝招募卖家志愿者</a></li>
+								<li><a href="#">阿里推出兼职神器</a></li>
+								<li><a href="#">700家热风淘宝路</a></li>
+								<li><a href="#">是赚钱还是骗子</a></li>
+							</ul>
+							<ul style="display:none">
+								<li><a href="#">淘宝用户必备神器</a></li>
+								<li><a href="#">卖家账户安全9守则</a></li>
+								<li><a href="#">支付宝实名认证信息</a></li>
+								<li><a href="#">账户没钱也被骗</a></li>
+							</ul>
+							<ul style="display:none">
+								<li><a href="#">阿里联合公益计划启动</a></li>
+								<li><a href="#">一图看懂联合公益计划</a></li>
+								<li><a href="#">公益宝贝卖家发票索取</a></li>
+								<li><a href="#">公益机构淘宝开店攻略</a></li>
+							</ul>
+						</div>
+					</div>
+					<div class="aside-another"></div>
+				</aside>
+				<!--侧边栏导航部分-->
+				<div class="taon-asideNav" id="taon-asiN">
+					<div class="taon-asideNavL" id="taon-adL">
+						<ul>
+							<h5>主题市场</h5>
+							<li>
+								<span>
+								<a href="#">女装</a>/
+								<a href="#">男装</a>/
+								<a href="#">内衣</a>
+								</span>
+								<i>></i>
+							</li>
+							<li>
+								<span>
+								<a href="#">鞋靴</a>/
+								<a href="#">箱包</a>/
+								<a href="#">配件</a>
+								</span>
+								<i>></i>
+							</li>
+							<li>
+								<span>
+								<a href="#">家电</a>/
+								<a href="#">数码</a>/
+								<a href="#">手机</a>
+								</span>
+								<i>></i>
+							</li>
+							<li>
+								<span>
+								<a href="#">美妆</a>/
+								<a href="#">洗护</a>/
+								<a href="#">保健品</a>
+								</span>
+								<i>></i>
+							</li>
+							<li>
+								<span>
+								<a href="#">运动</a>/
+								<a href="#">户外</a>/
+								<a href="#">乐器</a>
+								</span>
+								<i>></i>
+							</li>
+							<li>
+								<span>
+								<a href="#">美食</a>/
+								<a href="#">生鲜</a>/
+								<a href="#">零食</a>
+								</span>
+								<i>></i>
+							</li>
+							<li>
+								<span>
+								<a href="#">鲜花</a>/
+								<a href="#">宠物</a>/
+								<a href="#">农资</a>
+								</span>
+								<i>></i>
+							</li>
+						</ul>
+					</div>
+					<!--展开部分-->
+					<div class="taon-asideNavR" id="taon-aside" style="display:none">
+						<div class="deploy-item" style="display:none">
+							<div class="deploy-partly">
+								<div class="deploy-top clearfix">	
+								  <img src="./img/aa.jpg" alt="">							<a href="#"><h4>女装</h4></a>
+								        <a href="#">更多</a>
+								</div>
+								<p>
+									<a href="#">韩版</a>
+									<a href="#">新品</a>
+									<a href="#">淘品牌</a>
+									<a href="#">半身裙</a>
+									<a href="#">套装</a>
+									<a href="#">阔腿裤</a>
+									<a href="#">雪纺纱</a>
+									<a href="#">甜美风</a>
+									<a href="#">文艺范</a>
+									<a href="#">红人私服</a>
+									<a href="#">风衣</a>
+									<a href="#">卫衣</a>
+									<a href="#">甜美风</a>
+									<a href="#">文艺范</a>
+									<a href="#">红人私服</a>
+									<a href="#">风衣</a>
+									<a href="#">卫衣</a>
+								</p>
+							</div>
+							<div class="deploy-partly">
+								<div class="deploy-top clearfix"> 
+                                      <img src="./img/bb.jpg" alt="">	
+                                         <a href="#"><h4>男装</h4></a>
+								        <a href="#">更多</a>
+								</div>
+								<p>
+									<a href="#">韩版</a>
+									<a href="#">新品</a>
+									<a href="#">淘品牌</a>
+									<a href="#">新上市</a>
+									<a href="#">单品</a>
+									<a href="#">小腿裤</a>
+									<a href="#">牛仔外套</a>
+									<a href="#">西装</a>
+									<a href="#">运动套装</a>
+									<a href="#">红人私服</a>
+									<a href="#">风衣</a>
+									<a href="#">卫衣</a>
+								</p>
+							</div>
+							<div class="deploy-partly">
+								<div class="deploy-top clearfix">	
+							  	 <img src="./img/cc.jpg" alt="">								<a href="#"><h4>内衣</h4></a>
+								        <a href="#">更多</a>
+								</div>
+								<p>
+									<a href="#">韩版</a>
+									<a href="#">新品</a>
+									<a href="#">淘品牌</a>
+									<a href="#">新上市</a>
+									<a href="#">丝袜</a>
+									<a href="#">船袜</a>
+									<a href="#">棉袜</a>
+									<a href="#">打底裤</a>
+									<a href="#">运动套装</a>
+									<a href="#">红人私服</a>
+									<a href="#">风衣</a>
+									<a href="#">卫衣</a>
+								</p>
+							</div>
+						</div>
+						<div class="deploy-item" style="display:none">
+							<div class="deploy-partly">
+								<div class="deploy-top clearfix">	
+								<img src="./img/aa1.jpg" alt="">							<a href="#"><h4>鞋靴</h4></a>
+								        <a href="#">更多</a>
+								</div>
+								<p>
+									<a href="#">韩版</a>
+									<a href="#">新品</a>
+									<a href="#">淘品牌</a>
+									<a href="#">半身裙</a>
+									<a href="#">套装</a>
+									<a href="#">阔腿裤</a>
+									<a href="#">雪纺纱</a>
+									<a href="#">甜美风</a>
+									<a href="#">文艺范</a>
+									<a href="#">红人私服</a>
+									<a href="#">风衣</a>
+									<a href="#">卫衣</a>
+								</p>
+							</div>
+							<div class="deploy-partly">
+								<div class="deploy-top clearfix">
+								<img src="./img/bb1.jpg" alt="">								<a href="#"><h4>箱包</h4></a>
+								        <a href="#">更多</a>
+								</div>
+								<p>
+									<a href="#">韩版</a>
+									<a href="#">新品</a>
+									<a href="#">淘品牌</a>
+									<a href="#">新上市</a>
+									<a href="#">单品</a>
+									<a href="#">小腿裤</a>
+									<a href="#">牛仔外套</a>
+									<a href="#">西装</a>
+									<a href="#">运动套装</a>
+									<a href="#">红人私服</a>
+									<a href="#">风衣</a>
+									<a href="#">卫衣</a>
+								</p>
+							</div>
+							<div class="deploy-partly">
+								<div class="deploy-top clearfix" >
+								<img src="./img/cc1.jpg" alt="">								<a href="#"><h4>配件</h4></a>
+								        <a href="#">更多</a>
+								</div>
+								<p>
+									<a href="#">韩版</a>
+									<a href="#">新品</a>
+									<a href="#">淘品牌</a>
+									<a href="#">新上市</a>
+									<a href="#">丝袜</a>
+									<a href="#">船袜</a>
+									<a href="#">棉袜</a>
+									<a href="#">打底裤</a>
+									<a href="#">运动套装</a>
+									<a href="#">红人私服</a>
+									<a href="#">风衣</a>
+									<a href="#">卫衣</a>
+								</p>
+							</div>
+						</div>
+						<div class="deploy-item" style="display:none">
+							<div class="deploy-partly">
+								<div class="deploy-top clearfix">	
+								<img src="./img/aa2.jpg" alt="">							<a href="#"><h4>家电</h4></a>
+								        <a href="#">更多</a>
+								</div>
+								<p>
+									<a href="#">韩版</a>
+									<a href="#">新品</a>
+									<a href="#">淘品牌</a>
+									<a href="#">半身裙</a>
+									<a href="#">套装</a>
+									<a href="#">阔腿裤</a>
+									<a href="#">雪纺纱</a>
+									<a href="#">甜美风</a>
+									<a href="#">文艺范</a>
+									<a href="#">红人私服</a>
+									<a href="#">风衣</a>
+									<a href="#">卫衣</a>
+								</p>
+							</div>
+							<div class="deploy-partly">
+								<div class="deploy-top clearfix">
+								<img src="./img/bb2.jpg" alt="">								<a href="#"><h4>数码</h4></a>
+								        <a href="#">更多</a>
+								</div>
+								<p>
+									<a href="#">韩版</a>
+									<a href="#">新品</a>
+									<a href="#">淘品牌</a>
+									<a href="#">新上市</a>
+									<a href="#">单品</a>
+									<a href="#">小腿裤</a>
+									<a href="#">牛仔外套</a>
+									<a href="#">西装</a>
+									<a href="#">运动套装</a>
+									<a href="#">红人私服</a>
+									<a href="#">风衣</a>
+									<a href="#">卫衣</a>
+								</p>
+							</div>
+							<div class="deploy-partly">
+								<div class="deploy-top clearfix">	
+								<img src="./img/cc2.jpg" alt="">							<a href="#"><h4>手机</h4></a>
+								        <a href="#">更多</a>
+								</div>
+								<p>
+									<a href="#">韩版</a>
+									<a href="#">新品</a>
+									<a href="#">淘品牌</a>
+									<a href="#">新上市</a>
+									<a href="#">丝袜</a>
+									<a href="#">船袜</a>
+									<a href="#">棉袜</a>
+									<a href="#">打底裤</a>
+									<a href="#">运动套装</a>
+									<a href="#">红人私服</a>
+									<a href="#">风衣</a>
+									<a href="#">卫衣</a>
+								</p>
+							</div>
+						</div>
+						<div class="deploy-item" style="display:none">
+							<div class="deploy-partly">
+								<div class="deploy-top clearfix">	
+								  <img src="./img/aa.jpg" alt="">							<a href="#"><h4>女装</h4></a>
+								        <a href="#">更多</a>
+								</div>
+								<p>
+									<a href="#">韩版</a>
+									<a href="#">新品</a>
+									<a href="#">淘品牌</a>
+									<a href="#">半身裙</a>
+									<a href="#">套装</a>
+									<a href="#">阔腿裤</a>
+									<a href="#">雪纺纱</a>
+									<a href="#">甜美风</a>
+									<a href="#">文艺范</a>
+									<a href="#">红人私服</a>
+									<a href="#">风衣</a>
+									<a href="#">卫衣</a>
+									<a href="#">甜美风</a>
+									<a href="#">文艺范</a>
+									<a href="#">红人私服</a>
+									<a href="#">风衣</a>
+									<a href="#">卫衣</a>
+								</p>
+							</div>
+							<div class="deploy-partly">
+								<div class="deploy-top clearfix"> 
+                                      <img src="./img/bb.jpg" alt="">	
+                                         <a href="#"><h4>男装</h4></a>
+								        <a href="#">更多</a>
+								</div>
+								<p>
+									<a href="#">韩版</a>
+									<a href="#">新品</a>
+									<a href="#">淘品牌</a>
+									<a href="#">新上市</a>
+									<a href="#">单品</a>
+									<a href="#">小腿裤</a>
+									<a href="#">牛仔外套</a>
+									<a href="#">西装</a>
+									<a href="#">运动套装</a>
+									<a href="#">红人私服</a>
+									<a href="#">风衣</a>
+									<a href="#">卫衣</a>
+								</p>
+							</div>
+							<div class="deploy-partly">
+								<div class="deploy-top clearfix">	
+							  	 <img src="./img/cc.jpg" alt="">								<a href="#"><h4>内衣</h4></a>
+								        <a href="#">更多</a>
+								</div>
+								<p>
+									<a href="#">韩版</a>
+									<a href="#">新品</a>
+									<a href="#">淘品牌</a>
+									<a href="#">新上市</a>
+									<a href="#">丝袜</a>
+									<a href="#">船袜</a>
+									<a href="#">棉袜</a>
+									<a href="#">打底裤</a>
+									<a href="#">运动套装</a>
+									<a href="#">红人私服</a>
+									<a href="#">风衣</a>
+									<a href="#">卫衣</a>
+								</p>
+							</div>
+						</div>
+						<div class="deploy-item" style="display:none">
+							<div class="deploy-partly">
+								<div class="deploy-top clearfix">	
+								  <img src="./img/aa.jpg" alt="">							<a href="#"><h4>女装</h4></a>
+								        <a href="#">更多</a>
+								</div>
+								<p>
+									<a href="#">韩版</a>
+									<a href="#">新品</a>
+									<a href="#">淘品牌</a>
+									<a href="#">半身裙</a>
+									<a href="#">套装</a>
+									<a href="#">阔腿裤</a>
+									<a href="#">雪纺纱</a>
+									<a href="#">甜美风</a>
+									<a href="#">文艺范</a>
+									<a href="#">红人私服</a>
+									<a href="#">风衣</a>
+									<a href="#">卫衣</a>
+									<a href="#">甜美风</a>
+									<a href="#">文艺范</a>
+									<a href="#">红人私服</a>
+									<a href="#">风衣</a>
+									<a href="#">卫衣</a>
+								</p>
+							</div>
+							<div class="deploy-partly">
+								<div class="deploy-top clearfix"> 
+                                      <img src="./img/bb.jpg" alt="">	
+                                         <a href="#"><h4>男装</h4></a>
+								        <a href="#">更多</a>
+								</div>
+								<p>
+									<a href="#">韩版</a>
+									<a href="#">新品</a>
+									<a href="#">淘品牌</a>
+									<a href="#">新上市</a>
+									<a href="#">单品</a>
+									<a href="#">小腿裤</a>
+									<a href="#">牛仔外套</a>
+									<a href="#">西装</a>
+									<a href="#">运动套装</a>
+									<a href="#">红人私服</a>
+									<a href="#">风衣</a>
+									<a href="#">卫衣</a>
+								</p>
+							</div>
+							<div class="deploy-partly">
+								<div class="deploy-top clearfix">	
+							  	 <img src="./img/cc.jpg" alt="">								<a href="#"><h4>内衣</h4></a>
+								        <a href="#">更多</a>
+								</div>
+								<p>
+									<a href="#">韩版</a>
+									<a href="#">新品</a>
+									<a href="#">淘品牌</a>
+									<a href="#">新上市</a>
+									<a href="#">丝袜</a>
+									<a href="#">船袜</a>
+									<a href="#">棉袜</a>
+									<a href="#">打底裤</a>
+									<a href="#">运动套装</a>
+									<a href="#">红人私服</a>
+									<a href="#">风衣</a>
+									<a href="#">卫衣</a>
+								</p>
+							</div>
+						</div>
+						<div class="deploy-item" style="display:none">
+							<div class="deploy-partly">
+								<div class="deploy-top clearfix">	
+								  <img src="./img/aa.jpg" alt="">							<a href="#"><h4>女装</h4></a>
+								        <a href="#">更多</a>
+								</div>
+								<p>
+									<a href="#">韩版</a>
+									<a href="#">新品</a>
+									<a href="#">淘品牌</a>
+									<a href="#">半身裙</a>
+									<a href="#">套装</a>
+									<a href="#">阔腿裤</a>
+									<a href="#">雪纺纱</a>
+									<a href="#">甜美风</a>
+									<a href="#">文艺范</a>
+									<a href="#">红人私服</a>
+									<a href="#">风衣</a>
+									<a href="#">卫衣</a>
+									<a href="#">甜美风</a>
+									<a href="#">文艺范</a>
+									<a href="#">红人私服</a>
+									<a href="#">风衣</a>
+									<a href="#">卫衣</a>
+								</p>
+							</div>
+							<div class="deploy-partly">
+								<div class="deploy-top clearfix"> 
+                                      <img src="./img/bb.jpg" alt="">	
+                                         <a href="#"><h4>男装</h4></a>
+								        <a href="#">更多</a>
+								</div>
+								<p>
+									<a href="#">韩版</a>
+									<a href="#">新品</a>
+									<a href="#">淘品牌</a>
+									<a href="#">新上市</a>
+									<a href="#">单品</a>
+									<a href="#">小腿裤</a>
+									<a href="#">牛仔外套</a>
+									<a href="#">西装</a>
+									<a href="#">运动套装</a>
+									<a href="#">红人私服</a>
+									<a href="#">风衣</a>
+									<a href="#">卫衣</a>
+								</p>
+							</div>
+							<div class="deploy-partly">
+								<div class="deploy-top clearfix">	
+							  	 <img src="./img/cc.jpg" alt="">								<a href="#"><h4>内衣</h4></a>
+								        <a href="#">更多</a>
+								</div>
+								<p>
+									<a href="#">韩版</a>
+									<a href="#">新品</a>
+									<a href="#">淘品牌</a>
+									<a href="#">新上市</a>
+									<a href="#">丝袜</a>
+									<a href="#">船袜</a>
+									<a href="#">棉袜</a>
+									<a href="#">打底裤</a>
+									<a href="#">运动套装</a>
+									<a href="#">红人私服</a>
+									<a href="#">风衣</a>
+									<a href="#">卫衣</a>
+								</p>
+							</div>
+						</div>
+						<div class="deploy-item" style="display:none">
+							<div class="deploy-partly">
+								<div class="deploy-top clearfix">	
+								  <img src="./img/aa.jpg" alt="">							<a href="#"><h4>女装</h4></a>
+								        <a href="#">更多</a>
+								</div>
+								<p>
+									<a href="#">韩版</a>
+									<a href="#">新品</a>
+									<a href="#">淘品牌</a>
+									<a href="#">半身裙</a>
+									<a href="#">套装</a>
+									<a href="#">阔腿裤</a>
+									<a href="#">雪纺纱</a>
+									<a href="#">甜美风</a>
+									<a href="#">文艺范</a>
+									<a href="#">红人私服</a>
+									<a href="#">风衣</a>
+									<a href="#">卫衣</a>
+									<a href="#">甜美风</a>
+									<a href="#">文艺范</a>
+									<a href="#">红人私服</a>
+									<a href="#">风衣</a>
+									<a href="#">卫衣</a>
+								</p>
+							</div>
+							<div class="deploy-partly">
+								<div class="deploy-top clearfix"> 
+                                      <img src="./img/bb.jpg" alt="">	
+                                         <a href="#"><h4>男装</h4></a>
+								        <a href="#">更多</a>
+								</div>
+								<p>
+									<a href="#">韩版</a>
+									<a href="#">新品</a>
+									<a href="#">淘品牌</a>
+									<a href="#">新上市</a>
+									<a href="#">单品</a>
+									<a href="#">小腿裤</a>
+									<a href="#">牛仔外套</a>
+									<a href="#">西装</a>
+									<a href="#">运动套装</a>
+									<a href="#">红人私服</a>
+									<a href="#">风衣</a>
+									<a href="#">卫衣</a>
+								</p>
+							</div>
+							<div class="deploy-partly">
+								<div class="deploy-top clearfix">	
+							  	 <img src="./img/cc.jpg" alt="">								<a href="#"><h4>内衣</h4></a>
+								        <a href="#">更多</a>
+								</div>
+								<p>
+									<a href="#">韩版</a>
+									<a href="#">新品</a>
+									<a href="#">淘品牌</a>
+									<a href="#">新上市</a>
+									<a href="#">丝袜</a>
+									<a href="#">船袜</a>
+									<a href="#">棉袜</a>
+									<a href="#">打底裤</a>
+									<a href="#">运动套装</a>
+									<a href="#">红人私服</a>
+									<a href="#">风衣</a>
+									<a href="#">卫衣</a>
+								</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			</div>
+
+		</div>
+	</body>
+</html>
