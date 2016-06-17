@@ -150,6 +150,9 @@ function appeara() {
      img.onmouseout=function(){
     	letre.style.display='none';
     };
+    letre.onmouseover=function(){
+    	letre.style.display='block';
+    }
 }
   
 function autoPlay(){
