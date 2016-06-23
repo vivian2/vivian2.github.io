@@ -191,7 +191,7 @@ function nextfor(curindex){
    backw.onclick=function(){
    	 clearTimeout(t);
    	 if (curindex==data.length-1) {
-   	 	 curindex=0;
+   	 	 curindex=-1;
    	 }
       curindex +=1;
    	 changeOption(curindex);
