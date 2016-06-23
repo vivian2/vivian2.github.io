@@ -1,0 +1,103 @@
+<!doctype>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>write reminder</title>
+	<link rel="stylesheet" type="text/css" href="css/reset.css">
+	<link rel="stylesheet" type="text/css" href="css/main.css">
+</head>
+<body>
+    <div class="wrap">
+     <div id="tpl_scrubber_year">
+	    <a href="javascript:;" id="scrubber_{year}" class="scrubber_year scrubber_{year}" onclick="show_year({year})">{year}</a> 
+		{list}
+	 </div>
+	  <div id="tpl_scrubber_month">
+	    <a href="javascript:;" id="scrubber_{year}_{month}" class="scrubber_month scrubber_{month} scrubber_in_{year} current" onclick="show_month({year},{month})">{month}月</a> 
+	 </div>
+	 <div id="tpl_content_year">
+	     <div id="content_{year}" class="content_year content_{year}">{year}</div>
+		 {list}
+	 </div>
+	 <div id="tpl_content_month">
+	     <div id="content_{year}_{month}" class="content_month content_{month} content_in_{year}">{month}月</div>
+		 {list}
+	 </div>
+	 <div id="tpl_content_item">
+	    <div class="content_item">
+	    <div class="content_item_arrow"></div>
+		    <div class="content_item_dot">
+			    <div class="content_item_dot_child"></div>
+			</div>
+		    <div class="content_item_goal">{goal}</div>
+			<div class="content_item_process">
+			    <a href="#"></a>
+				<a href="#"></a>
+				<a href="#"></a>
+				<a href="#"></a>
+			</div>
+			<div class="content_item_checked">
+			    <label><input id="memorize" type="checkbox" value="memorize">{step}0</label>
+				<label><input id="shoes" type="checkbox" value="shoes">{step}1</label>
+			</div>
+			<div class="content_item_createDate">{date}完成</div> 
+	 </div>
+	 </div>
+	 </div>
+    <div class="head"></div>
+	<div class="top">
+	    <form>
+		   <label><span class="first">创建新的目标：</span><input name="goal" class="mygoal" id="mygoal" type="text" maxlength="15" placeholder="过六级"></label>
+		   <ul id="process" class="process">
+		       <li>
+		          <label><span>step <i>1</i></span><input class="steps" maxlength="10" name="step" type="text" ></label>
+			   </li>
+			   <li>
+		          <label><span>step <i>2</i></span><input class="steps" maxlength="10" name="step" type="text" ></label>
+			   </li>
+			   <li id="moreli" class="moreli"><a href="#" class="addli" id="addli" title="不能超过三条"></a></li>
+		   </ul>
+		
+		<div class="deadline">
+		 <span>完成目标的时间:</span><label><input class="deadline_year" type="text" maxlength="4" />年</label>
+		 <i>-</i><label><input class="deadline_month" type="text" maxlength="2" />月</label><i>-</i>
+		 <label><input class="deadline_date" type="text" maxlength="2"/>日</label>
+		</div>
+		<div class="top-end">
+		<span class="now_date">2015-03-02</span>
+		<button type="submit">创建</button>
+		</div>
+		</form>
+	</div>
+	<div class="container">
+	<div class="scrubber" id="scrubber">
+	    <a href="javascript:;" class="scrubber_year current">2015</a>
+		<a href="javascript:;" class="scrubber_month scrubber_in_year current">3月</a>
+	</div>
+	<div class="content" id="content">
+	    <div class="content_year">2014</div>
+		<div class="content_month">4月</div>
+		<div class="content_item">
+		    <div class="content_item_arrow"></div>
+		    <div class="content_item_dot">
+			    <div class="content_item_dot_child"></div>
+			</div>
+		    <div class="content_item_goal">过六级</div>
+			<div class="content_item_process">
+			    <a href="#"></a>
+				<a href="#"></a>
+				<a href="#"></a>
+				<a href="#"></a>
+			</div>
+			<div class="content_item_checked">
+			    <label><input id="memorize" type="checkbox" value="memorize">{step}</label>
+				<label><input id="shoes" type="checkbox" value="shoes">{step}</label>
+			</div>
+			<div class="content_item_createDate"><i>2013-04-13<i>完成</div>
+		</div>
+	</div>
+	</div>
+<script type="text/javascript" src="js/data.js"></script>
+<script type="text/javascript" src="js/main.js"></script>
+</body>
+</html>
