@@ -280,6 +280,8 @@ for(i=0;i<contentchecked.length;i++){
 	    inputs[j].onclick=function(){
 		 if(this.checked){
 			this.parentNode.style.backgroundColor="";
+		 }else{
+		 	this.parentNode.style.backgroundColor="red";
 		 }
 		 
 	}
