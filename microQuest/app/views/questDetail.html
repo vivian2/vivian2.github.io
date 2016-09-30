@@ -1,0 +1,27 @@
+<ul ng-repeat="quest in quests track by $index">
+		<span>Q{{$index+1}}</span>
+		<input type="text" value={{quest.title}} class="quesTit">
+	<li ng-if="quest.kind=='1'">
+		<input type={{quest.types}} name={{quest.name}}{{$index}}>
+		<input type='text' value={{quest.options[0]}}>
+		<input type={{quest.types}} name={{quest.name}}{{$index}}>
+		<input type='text' value={{quest.options[1]}}>
+	</li>
+	<li ng-if="quest.kind=='2'">
+		<input type={{quest.types}} name={{quest.name}}{{$index}}>
+		<input type='text' value={{quest.options[0]}}>
+		<input type={{quest.types}} name={{quest.name}}{{$index}}>
+		<input type='text' value={{quest.options[1]}}>
+		<input type={{quest.types}} name={{quest.name}}{{$index}}>
+		<input type='text' value={{quest.options[2]}}>
+		<input type={{quest.types}} name={{quest.name}}{{$index}}>
+		<input type='text' value={{quest.options[3]}}>
+	</li>	
+	<textarea cols="20" rows="4" ng-if="quest.kind=='3'">{{quest.value.num}}</textarea>
+	<div class="buttons">
+		<up></up>
+		<down></down>
+		<dup></dup>
+		<del></del>
+	</div>
+</ul>

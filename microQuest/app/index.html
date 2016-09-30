@@ -1,0 +1,33 @@
+<!DOCTYPE>
+<html ng-app="myapp">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+	<title>实时问卷调查</title>
+	<link rel="stylesheet" type="text/css" href="bower_components/bootstrap/dist/css/bootstrap.css">
+	<link rel="stylesheet" type="text/css" href="styles/reset.css">
+	<link rel="stylesheet" type="text/css" href="styles/index.css">
+  <link rel="stylesheet" type="text/css" href="styles/calender.css">
+</head>
+<body>
+  <div class="header">
+      <a href="#/">问卷管理</a>
+      <span>我的问卷</span>
+  </div>
+  <div class="view-container">
+    <div ui-view></div>	
+  </div>
+  <script type="text/javascript" src="bower_components/jquery/dist/jquery.js"></script>
+  <script type="text/javascript" src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
+  <script type="text/javascript" src="bower_components/angular/angular.js"></script>
+  <script type="text/javascript" src="bower_components/angular-ui-router/release/angular-ui-router.js"></script>
+  <script type="text/javascript" src="script/index.js"></script>
+  <script type="text/javascript" src="script/services/baseService.js"></script>  
+  <script type="text/javascript" src="script/controllers/HomeController.js"></script>
+  <script type="text/javascript" src="script/controllers/editePageController.js"></script>
+  <script type="text/javascript" src="script/controllers/showResult.js"></script>
+  <script type="text/javascript" src="script/directives/directive.js"></script>
+  <script type="text/javascript" src="data/calender.js"></script>
+</body>
+</html>

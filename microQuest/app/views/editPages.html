@@ -1,0 +1,26 @@
+<div class="editContainer">
+	<div class="addTitle">
+		<input type="text" class="topTitle" value="这里是标题">
+	</div>
+    <div class="questDetail" ui-view="questDetail">
+    </div>
+	<div class="addQuest">
+	    <div class="questType" style="display:none">
+	    	<button class="radioType" ng-click="addRadio()">单选题</button>
+	    	<button class="multi" ng-click="addMuti()">多选题</button>
+	    	<button class="text" ng-click="addText()">文本框</button>
+	    </div>
+		<p ng-click="showType()">添加问题</p>
+	</div>
+	<div class="theEnd clearfix">
+	  <div class="time">
+		<span>问题截止日期</span>
+		<input type="text" ng-focus='showCale()' class="dar">
+		<div class="container" style="display:none"></div>
+	  </div>
+		<div class="sumbitReq">
+			<button ng-click="save()">保存问卷</button>
+			<a ng-href={{myhref}} ng-click="send()">发布问卷</a>
+		</div>
+	</div>
+</div>

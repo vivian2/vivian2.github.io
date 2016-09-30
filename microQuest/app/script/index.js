@@ -1,0 +1,28 @@
+var myapp = angular.module('myapp',['ui.router','homeModule',
+	'editePageMoudle','up','down','dup','del','calender','baseServices','showResult']);
+myapp.config(function($stateProvider,$urlRouterProvider){
+	$urlRouterProvider.otherwise('/')
+	$stateProvider
+	    .state('/',{
+	    	url:'/',
+	    	templateUrl:'./views/home.html',
+	    	controller:'HomeController'
+	    })
+	    .state('editPages',{
+	    	url:'/{indexId:[0-9]{1,4}}',
+	    	views:{
+	    		'':{
+	    			templateUrl:'./views/editPages.html',
+	    			controller:'EditPagesController'
+	    		},
+	    		'questDetail@editPages':{
+	    			templateUrl:'./views/questDetail.html'
+	    		}
+	    	}
+	    })
+	    .state('showResult',{
+	    	url:'/show/:showId',
+	    	templateUrl:'./views/showResult.html',
+	    	controller:'ShowResultController'
+	    });
+});

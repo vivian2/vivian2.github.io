@@ -1,0 +1,33 @@
+body,html,th,td,tbody,thead,tr,h3{
+	padding: 0;
+	margin: 0;
+}
+.container{
+	width:175px;
+	height:202px;
+    color: #000;}
+.container .head{
+	width: 190px;
+	background-color: #f2f2f2;
+}
+.container thead{
+	color: #000;
+}
+.container tbody{
+	border: 1px solid #000;
+	height:150px;
+	color: #000;
+}
+.container tr{
+	width: 140px;
+	height: 20px;
+}
+.container table tr,.container table th{
+	padding: 3px;
+}
+.container h3{
+	display: inline-block;
+}
+.container button{
+	background-color: red;
+}

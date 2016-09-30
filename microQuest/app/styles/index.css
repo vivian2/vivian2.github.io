@@ -1,0 +1,193 @@
+body{
+	font-size: 14px;
+	background-color: #efefef;
+}
+span{
+	color: #000;
+}
+.header{
+	height: 60px;
+	background-color: #ee7419;
+}
+.header a{
+	font-size: 16px;
+	text-decoration: none;
+	color:#fff;
+	margin-top: 20px;
+	margin-left: 60px;
+}
+.header span{
+	display: inline-block;
+	margin-left: 60px;
+	margin-top: 20px;
+	color:#fff;
+}
+/*home.html*/
+.createNew{
+	background-color: #fff;
+	width:80%;
+	height: 300px;
+	margin:60px auto;
+	border-radius: 2px;
+	border:1px solid #f2f2f2;
+}
+.createNew .wrap{
+	margin-left: 40%;
+}
+.createNew a{
+	display: inline-block;
+	border-radius: 8px;
+	font-size: 20px;
+	background-color: #f07600;
+	padding: 10px 30px;
+	width: 150px;
+	margin-top: 125px;
+	height: 50px;
+	text-align: center;
+	color:#fff;
+}
+.list table{
+	color:#000;
+	text-align: center;
+	margin: 0 auto;
+}
+table tr,table th{
+	padding: 60px;
+}
+table tr td a,table tr td button{
+	color: green;
+}
+table tr td button{
+	background-color: #f2f2f2;
+	border: none;
+}
+/*editepage*/
+.editContainer{
+	width: 70%;
+	margin: 40px auto;
+	background-color: #fff;
+	box-shadow: 1px 1px .5px #ccc;
+	text-align: center;
+}
+input,button,p{
+	color:#000;
+}
+.addTitle{
+	border-bottom: 1px solid #ccc;
+	width: 80%;
+	height: 80px;
+	margin: 0 auto;
+}
+.addTitle:hover,.addTitle:hover input{
+	background-color: #fef1e8;
+}
+.addTitle input{
+	border: none;
+	font-size: 20px;
+	margin-left: 10%;
+	height: 40px;
+	margin-top: 20px;
+}
+.addQuest{
+	width: 70%;
+	border: 1px solid #ccc;
+	margin: 20px auto;
+	text-align: center;
+	padding-top: 15px;
+}
+.questDetail{
+	width: 70%;
+	margin: 20px auto;
+	text-align: left;
+}
+.questDetail ul li{
+	margin-left: 20px;
+}
+.questDetail input{
+	border:none;
+}
+.questDetail input[type="text"]{
+	border:none;
+	width: 100px;
+}
+.questDetail input:focus{
+	border:1px solid #000;
+}
+.questDetail .buttons{
+	margin-left: 60%;
+	margin-top: 10px;
+}
+.questDetail button{
+	border: none;
+	color: #000;
+	background-color: #fef1e8;
+}
+.questDetail textarea{
+	display: block;
+	margin-left: 20%;
+	color: #000;
+}
+.addQuest .questType button{
+    background-color: #eee;
+    border: 1px solid #a1a1a1;
+    color: #5a5a5a;
+    padding: 2px;
+}
+.addQuest p{
+	width: 80%;
+	height: 60px;
+	margin: 10px auto;
+	line-height: 60px;
+	background-color: #eee;
+}
+.theEnd{
+	width: 80%;
+	margin: 20px auto;
+	padding: 40px;
+	text-align: center;
+	border-top: 1px solid #ccc;
+}
+.theEnd .time span{
+	color: #000;
+}
+.theEnd .time{
+	float: left;
+}
+.theEnd .sumbitReq button,.theEnd .sumbitReq a{
+	background-color:#fff;
+	border: 1px solid #a1a1a1;
+	margin:0 10px;
+	color: #000;
+}
+.theEnd .sumbitReq a{
+	padding: 2px;
+}
+/*showResult页面*/
+.showResult{
+	width:800px;
+	background-color: #fff;
+	margin: 100px auto;
+	font-size: 18px;
+}
+.showResult h3{
+   border-bottom: 1px solid rgb(0, 0, 0);
+   text-align: center;
+   padding: 20px;
+   width: 80%;
+   margin: 0px auto;
+}
+.showResult ul{
+	margin: 30px 80px;
+	border: 1px solid #CEB8B8;
+	box-shadow: 1px 1px 1.2px #A73131;
+	padding: 20px;
+	background-color: rgba(238, 116, 25, 0.07);
+}
+.showResult a{
+	display: inline-block;
+    color: #fff;
+    background-color: rgb(238, 116, 25);
+    padding: 3px 10px;
+    border-radius: 2px 4px;
+    margin: 30px 360px;
+}

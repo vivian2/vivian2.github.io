@@ -1,0 +1,20 @@
+<div class="showResult">
+<h3>{{title}}</h3>
+<ul ng-repeat="an in ans track by $index">
+   <div><span>{{$index+1}}</span>{{an.title}}</div>
+    <div ng-if="an.kind == '1'">
+   	    <li>{{an.options[0]}}有:<span>{{countRa}}</span>人选择</li>
+   	    <li>{{an.options[1]}}有:<span>{{countRb}}</span>人选择</li>
+    </div>
+    <div ng-if="an.kind == '2'">
+   	    <li>{{an.options[0]}}有:<span>{{countMa}}</span>人选择</li>
+   	    <li>{{an.options[1]}}有:<span>{{countMb}}</span>人选择</li>
+   	    <li>{{an.options[2]}}有:<span>{{countMc}}</span>人选择</li>
+   	    <li>{{an.options[3]}}有:<span>{{countMd}}</span>人选择</li>
+    </div>
+    <div ng-if="an.kind == '3'">
+   	    <p>{{text}}</p>
+    </div>    	
+</ul>
+<a href="#/">返回</a>
+</div>
