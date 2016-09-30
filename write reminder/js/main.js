@@ -25,57 +25,64 @@ var getCharCode = function(event){
 	}
 }
 //从数据中获取settime年月日
-var list={};
- for (i=0;i<data.length;i++){
-		 var item=data[i];
-		 var date=new Date(item.settime);
-		 var y=date.getFullYear();
-		 var m=date.getMonth()+1;
-		 var d=date.getDate();	 
+var getDatas=function(){
+	var list={};
+    for (i=0;i<data.length;i++){
+		var item=data[i];
+		var date=new Date(item.settime);
+		var y=date.getFullYear();
+		var m=date.getMonth()+1;
+		var d=date.getDate();	 
 	    if(!list[y]){list[y]={}};
         if(!list[y][m]){list[y][m]=[]};
 		item.year=y;
 		item.month=m;
 		item.date=d;     
 		list[y][m].push(item)
+    }
+    return list
 }	
 //时序菜单的生成
-var years=[];
-for( var a in list){	
-	var html_year=g_tpl("scrubber_year").replace(/\{year\}/g,a);
-    var months=[];
-	for(var b in list[a]){
-	 var html_month=g_tpl("scrubber_month").replace(/\{year\}/g,a).replace(/\{month\}/g,b);
-      months.unshift(html_month);	 
-	}
+var menuGe=function(){
+    var years=[];
+    var list=getDatas();
+    for( var a in list){	
+	    var html_year=g_tpl("scrubber_year").replace(/\{year\}/g,a);
+        var months=[];
+	    for(var b in list[a]){
+	        var html_month=g_tpl("scrubber_month").replace(/\{year\}/g,a).replace(/\{month\}/g,b);
+            months.unshift(html_month);	 
+	    }
 	var tpl_year=html_year.replace(/\{list\}/g,months.join(''));
 	years.unshift(tpl_year);
-}
-g("scrubber").innerHTML=years.join('');
+    }
+    g("scrubber").innerHTML=years.join('');
 //跟随列表的生成
-var html_content_years=[];
-for( a in list){	
-	var html_content_year=g_tpl("content_year").replace(/\{year\}/g,a);
-    var html_content_months=[];
-	for( b in list[a]){
-	 var html_content_month=g_tpl("content_month").replace(/\{year\}/g,a).replace(/\{month\}/g,b);
-	 var html_content_list=[];
-	 for (h in list[a][b]){
-	 var it=list[a][b];
-	var html_content_item=g_tpl("content_item").replace(/\{goal\}/g,it[h].goal)
+    var html_content_years=[];
+    for( a in list){	
+	    var html_content_year=g_tpl("content_year").replace(/\{year\}/g,a);
+        var html_content_months=[];
+	    for( b in list[a]){
+	      var html_content_month=g_tpl("content_month").replace(/\{year\}/g,a).replace(/\{month\}/g,b);
+	      var html_content_list=[];
+	      var html_content_item='';
+	      for (var h = 0;h<list[a][b].length;h++){
+	        var it=list[a][b];
+	        html_content_item=html_content_item+g_tpl("content_item").replace(/\{goal\}/g,it[h].goal)
 	                                           .replace(/\{date\}/g,it[h].aimtime)
-    	for( var c=0;c<=it[h].step.length;c++){
-	     var html_content_item = html_content_item.replace("{step}"+c,it[h].step[c]);
-        }
-		 
-	var tpl_content_month=html_content_month.replace(/\{list\}/g,html_content_item);
-	 }
-    html_content_months.unshift(tpl_content_month);
-	 }
+    	    for( var c=0;c<=it[h].step.length;c++){
+	          var html_content_item = html_content_item.replace("{step}"+c,it[h].step[c]);
+            }		 
+	        var tpl_content_month=html_content_month.replace(/\{list\}/g,html_content_item);
+	       }
+        html_content_months.unshift(tpl_content_month);
+	    }
 	var tpl_content_year=html_content_year.replace(/\{list\}/g,html_content_months.join(''));
 	html_content_years.unshift(tpl_content_year);
-}
+    }
 g("content").innerHTML=html_content_years.join('');
+}
+menuGe()
 //跳转
 var get_top=function(el){
 	return el.offsetTop;
@@ -250,7 +257,7 @@ function addstep(event){
 	ul.innerHTML =ul.innerHTML+texte;
 }
 addli.onclick=addstep;
- //提交创建按钮时，将文本显示到内容框中(暂未实现)
+ //提交创建按钮时，将文本显示到内容框中
 //格式化年月日
 function createNew(){
 	var deadline_month = g_class("deadline_month")[0];
@@ -267,11 +274,17 @@ function createNew(){
 	lis.goal=mygoal.value;
 	var date=new Date();
 	lis.settime=date.getFullYear()+"-"+(date.getMonth()+1)+"-"+date.getDate();
+	console.log(lis)
 	data.push(lis);
+	console.log(data)
+	menuGe()
+	changeColor()
 }
-var btn=document.getElementsByTagName("button")[0];
-btn.onclick=createNew;
+$('.submitIt').click(function(){
+	createNew()
+})
 //内容的目标实现改变边框的颜色
+var changeColor=function(){
 var contentchecked=g_class("content_item_checked");
 for(i=0;i<contentchecked.length;i++){
 	var inputs=contentchecked[i].getElementsByTagName("input");
@@ -287,8 +300,8 @@ for(i=0;i<contentchecked.length;i++){
 	}
 	}
 }
-
-
+}
+changeColor()
 
 
 

@@ -30,12 +30,6 @@
 			    <div class="content_item_dot_child"></div>
 			</div>
 		    <div class="content_item_goal">{goal}</div>
-			<div class="content_item_process">
-			    <a href="#"></a>
-				<a href="#"></a>
-				<a href="#"></a>
-				<a href="#"></a>
-			</div>
 			<div class="content_item_checked">
 			    <label><input id="memorize" type="checkbox" value="memorize">{step}0</label>
 				<label><input id="shoes" type="checkbox" value="shoes">{step}1</label>
@@ -47,13 +41,13 @@
     <div class="head"></div>
 	<div class="top">
 	    <form>
-		   <label><span class="first">创建新的目标：</span><input name="goal" class="mygoal" id="mygoal" type="text" maxlength="15" placeholder="过六级"></label>
+		   <label><span class="first">创建新的目标：</span><input class="mygoal" id="mygoal" type="text" maxlength="15" placeholder="请填写你要完成的事情"></label>
 		   <ul id="process" class="process">
 		       <li>
-		          <label><span>step <i>1</i></span><input class="steps" maxlength="10" name="step" type="text" ></label>
+		          <label><span>step <i>1</i></span><input class="steps" maxlength="10" type="text" ></label>
 			   </li>
 			   <li>
-		          <label><span>step <i>2</i></span><input class="steps" maxlength="10" name="step" type="text" ></label>
+		          <label><span>step <i>2</i></span><input class="steps" maxlength="10" type="text" ></label>
 			   </li>
 			   <li id="moreli" class="moreli"><a href="#" class="addli" id="addli" title="不能超过三条"></a></li>
 		   </ul>
@@ -64,40 +58,35 @@
 		 <label><input class="deadline_date" type="text" maxlength="2"/>日</label>
 		</div>
 		<div class="top-end">
-		<span class="now_date">2015-03-02</span>
-		<button type="submit">创建</button>
+		<span class="now_date"></span>
+		<a href="#" class="submitIt">创建</a>
 		</div>
 		</form>
 	</div>
 	<div class="container">
 	<div class="scrubber" id="scrubber">
-	    <a href="javascript:;" class="scrubber_year current">2015</a>
-		<a href="javascript:;" class="scrubber_month scrubber_in_year current">3月</a>
+	    <a href="javascript:;" class="scrubber_year current"></a>
+		<a href="javascript:;" class="scrubber_month scrubber_in_year current"></a>
 	</div>
 	<div class="content" id="content">
-	    <div class="content_year">2014</div>
-		<div class="content_month">4月</div>
+	    <div class="content_year"></div>
+		<div class="content_month"></div>
 		<div class="content_item">
 		    <div class="content_item_arrow"></div>
 		    <div class="content_item_dot">
 			    <div class="content_item_dot_child"></div>
 			</div>
-		    <div class="content_item_goal">过六级</div>
-			<div class="content_item_process">
-			    <a href="#"></a>
-				<a href="#"></a>
-				<a href="#"></a>
-				<a href="#"></a>
-			</div>
+		    <div class="content_item_goal"></div>
 			<div class="content_item_checked">
 			    <label><input id="memorize" type="checkbox" value="memorize">{step}</label>
 				<label><input id="shoes" type="checkbox" value="shoes">{step}</label>
 			</div>
-			<div class="content_item_createDate"><i>2013-04-13<i>完成</div>
+			<div class="content_item_createDate"><i><i>完成</div>
 		</div>
 	</div>
 	</div>
 <script type="text/javascript" src="js/data.js"></script>
+<script type="text/javascript" src="js/jquery-3.0.0.js"></script>
 <script type="text/javascript" src="js/main.js"></script>
 </body>
 </html>

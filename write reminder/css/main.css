@@ -81,7 +81,7 @@ ul li{
 	right:190px;
 	bottom:10px;
 }
-button{
+form .submitIt{
 	position:absolute;
 	right:140px;
 	bottom:10px;
@@ -89,7 +89,8 @@ button{
 	border:none;
 	box-shadow:1px 1px 1px rgba(0,0,0,.3);
 	cursor:pointer;
-	padding:2px;
+	padding:4px;
+	color:#fff;
 	
 }
 .scrubber{
