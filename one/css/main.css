@@ -44,7 +44,7 @@
 	height: 30px;
 	line-height: 30px;
 }
-.section2 p{
+.section2 >p{
 	width:80px;
 	text-align: center;
 	font-size: 16px;
@@ -52,11 +52,20 @@
 	padding-top: 50px;
 	margin:0 auto;
 }
+.section2 .slide p{
+	text-align: center;
+	margin-top: 20px;
+	font-weight: bold;
+	font-size: 18px;
+}
 .section2 a,.section2 img{
 	display:block;
 	width: 800px;
 	margin: 0 auto;
 	padding-top: 40px;
+}
+.section2 img{
+	height: 400px;
 }
 .section3{
 	position: relative;
