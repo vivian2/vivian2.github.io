@@ -49,3 +49,6 @@ Running `gulp test` will run the unit tests with karma.
         文本题用一个百分比图展现有效回答占比即可
         返回按钮点击后返回列表页面
 
+
+
+<a href="http://7xrp04.com1.z0.glb.clouddn.com/task_4_50_1.png">参考设计图</a>
