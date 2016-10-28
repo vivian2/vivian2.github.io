@@ -20,6 +20,9 @@
 	right: -840px;
 	top: 200px;
 }
+.section1 p{
+	padding: 10px;
+}
 .job{
 	text-align: center;
 	margin-top: 20px;
