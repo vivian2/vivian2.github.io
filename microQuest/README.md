@@ -1,16 +1,5 @@
 # app
 
-This project is generated with [yo angular generator](https://github.com/yeoman/generator-angular)
-version 0.15.1.
-
-## Build & development
-
-Run `gulp` for building and `gulp serve` for preview.
-
-## Testing
-
-Running `gulp test` will run the unit tests with karma.
-
 任务是建立于百度前端学院任务五十：微型调查问卷平台
 
     问卷管理列表
